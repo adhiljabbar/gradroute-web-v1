@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown, Globe, BookOpen, Briefcase } from 'lucide-react';
 import logo from '../assets/logo.svg';
 import './Navbar.css';
 
@@ -20,11 +20,31 @@ const Navbar = () => {
 
         <nav className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <div className="nav-item-wrapper dropdown-container">
-            <span className="nav-item">Services ▾</span>
-            <div className="dropdown-menu">
-              <Link to="/services" className="dropdown-item" onClick={() => setIsOpen(false)}>Study Abroad</Link>
-              <Link to="/test-prep" className="dropdown-item" onClick={() => setIsOpen(false)}>Test Preparation</Link>
-              <Link to="/immigration" className="dropdown-item" onClick={() => setIsOpen(false)}>Immigration & PR</Link>
+            <span className="nav-item">Services <ChevronDown size={18} style={{ marginTop: '2px' }} /></span>
+            <div className="dropdown-menu mega-menu">
+              <div className="mega-menu-grid">
+                <Link to="/services" className="dropdown-item" onClick={() => setIsOpen(false)}>
+                  <div className="mega-icon"><Globe size={28} /></div>
+                  <div className="mega-text">
+                    <h4>Study Abroad</h4>
+                    <p>University admissions, counseling & visa guidance</p>
+                  </div>
+                </Link>
+                <Link to="/test-prep" className="dropdown-item" onClick={() => setIsOpen(false)}>
+                  <div className="mega-icon"><BookOpen size={28} /></div>
+                  <div className="mega-text">
+                    <h4>Test Preparation</h4>
+                    <p>High-yield IELTS, TOEFL, PTE & GRE coaching</p>
+                  </div>
+                </Link>
+                <Link to="/immigration" className="dropdown-item" onClick={() => setIsOpen(false)}>
+                  <div className="mega-icon"><Briefcase size={28} /></div>
+                  <div className="mega-text">
+                    <h4>Immigration & PR</h4>
+                    <p>Express Entry, Skilled Worker & Family Sponsorship</p>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
           <Link to="/destinations" className="nav-item" onClick={() => setIsOpen(false)}>Destinations</Link>
