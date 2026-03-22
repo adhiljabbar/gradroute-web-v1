@@ -6,6 +6,9 @@ import Services from './pages/Services';
 import Destinations from './pages/Destinations';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
+import TestPrep from './pages/TestPrep';
+import Immigration from './pages/Immigration';
+import FAQ from './pages/FAQ';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -20,6 +23,9 @@ function App() {
           <Route path="/destinations" element={<Destinations />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/test-prep" element={<TestPrep />} />
+          <Route path="/immigration" element={<Immigration />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
       </main>
       <Footer />

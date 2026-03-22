@@ -1,0 +1,55 @@
+.immig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 80px;
+}
+
+.immig-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  padding: 50px 40px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--glass-border);
+  transition: var(--transition);
+  text-align: left;
+}
+
+.immig-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-cyan);
+}
+
+.immig-icon {
+  background: linear-gradient(135deg, var(--primary-navy), var(--primary-cyan));
+  color: var(--white);
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: var(--transition);
+}
+
+.immig-card:hover .immig-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.immig-card h2 {
+  font-size: 1.8rem;
+  color: var(--primary-navy);
+  margin-bottom: 20px;
+}
+
+.immig-card p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
