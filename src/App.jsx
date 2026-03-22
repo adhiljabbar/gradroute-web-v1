@@ -11,6 +11,7 @@ import FAQ from './pages/FAQ';
 import DestinationDetail from './pages/DestinationDetail';
 import KeralaStudyAbroad from './pages/KeralaStudyAbroad';
 import Scholarships from './pages/Scholarships';
+import Immigration from './pages/Immigration';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
