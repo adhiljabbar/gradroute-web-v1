@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, Globe, BookOpen, Briefcase } from 'lucide-react';
+import { Menu, X, ChevronDown, Globe, BookOpen, Briefcase, Map, Users, Banknote } from 'lucide-react';
 import logo from '../assets/logo.svg';
 import './Navbar.css';
 
@@ -23,27 +23,46 @@ const Navbar = () => {
             <span className="nav-item">Services <ChevronDown size={18} style={{ marginTop: '2px' }} /></span>
             <div className="dropdown-menu mega-menu">
               <div className="mega-menu-grid">
-                <Link to="/services" className="dropdown-item" onClick={() => setIsOpen(false)}>
-                  <div className="mega-icon"><Globe size={28} /></div>
-                  <div className="mega-text">
-                    <h4>Study Abroad</h4>
-                    <p>University admissions, counseling & visa guidance</p>
-                  </div>
-                </Link>
-                <Link to="/test-prep" className="dropdown-item" onClick={() => setIsOpen(false)}>
-                  <div className="mega-icon"><BookOpen size={28} /></div>
-                  <div className="mega-text">
-                    <h4>Test Preparation</h4>
-                    <p>High-yield IELTS, TOEFL, PTE & GRE coaching</p>
-                  </div>
-                </Link>
-                <Link to="/immigration" className="dropdown-item" onClick={() => setIsOpen(false)}>
-                  <div className="mega-icon"><Briefcase size={28} /></div>
-                  <div className="mega-text">
-                    <h4>Immigration & PR</h4>
-                    <p>Express Entry, Skilled Worker & Family Sponsorship</p>
-                  </div>
-                </Link>
+                
+                {/* Column 1: Core */}
+                <div className="mega-column">
+                  <h3 className="mega-col-title">Core Services</h3>
+                  <Link to="/services" className="dropdown-item" onClick={() => setIsOpen(false)}>
+                    <div className="mega-icon"><Globe size={24} /></div>
+                    <div className="mega-text"><h4>Study Abroad</h4><p>Admissions & counseling</p></div>
+                  </Link>
+                  <Link to="/test-prep" className="dropdown-item" onClick={() => setIsOpen(false)}>
+                    <div className="mega-icon"><BookOpen size={24} /></div>
+                    <div className="mega-text"><h4>Test Preparation</h4><p>IELTS, TOEFL, PTE & GRE</p></div>
+                  </Link>
+                </div>
+
+                {/* Column 2: Visas & Maps */}
+                <div className="mega-column">
+                  <h3 className="mega-col-title">Visas & Reach</h3>
+                  <Link to="/immigration" className="dropdown-item" onClick={() => setIsOpen(false)}>
+                    <div className="mega-icon"><Briefcase size={24} /></div>
+                    <div className="mega-text"><h4>Immigration & PR</h4><p>Express Entry & Skilled Worker</p></div>
+                  </Link>
+                  <Link to="/destinations" className="dropdown-item" onClick={() => setIsOpen(false)}>
+                    <div className="mega-icon"><Map size={24} /></div>
+                    <div className="mega-text"><h4>Global Destinations</h4><p>UK, Canada, Europe & more</p></div>
+                  </Link>
+                </div>
+
+                {/* Column 3: Kerala & Funding */}
+                <div className="mega-column">
+                  <h3 className="mega-col-title">Special Resources</h3>
+                  <Link to="/kerala" className="dropdown-item highlight-item" onClick={() => setIsOpen(false)}>
+                    <div className="mega-icon"><Users size={24} /></div>
+                    <div className="mega-text"><h4>Kerala Students</h4><p>Trending courses & ROI</p></div>
+                  </Link>
+                  <Link to="/scholarships" className="dropdown-item" onClick={() => setIsOpen(false)}>
+                    <div className="mega-icon"><Banknote size={24} /></div>
+                    <div className="mega-text"><h4>Loans & Funding</h4><p>Gov schemes & DAAD</p></div>
+                  </Link>
+                </div>
+
               </div>
             </div>
           </div>

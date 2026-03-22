@@ -7,9 +7,10 @@ import Destinations from './pages/Destinations';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 import TestPrep from './pages/TestPrep';
-import Immigration from './pages/Immigration';
 import FAQ from './pages/FAQ';
 import DestinationDetail from './pages/DestinationDetail';
+import KeralaStudyAbroad from './pages/KeralaStudyAbroad';
+import Scholarships from './pages/Scholarships';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
           <Route path="/immigration" element={<Immigration />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/destinations/:id" element={<DestinationDetail />} />
+          <Route path="/kerala" element={<KeralaStudyAbroad />} />
+          <Route path="/scholarships" element={<Scholarships />} />
         </Routes>
       </main>
       <Footer />
