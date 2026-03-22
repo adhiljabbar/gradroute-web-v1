@@ -12,7 +12,7 @@ const Home = () => {
           <div className="hero-content animate-slide-up">
             <h1 className="hero-title">Navigate Your Future with Confidence</h1>
             <p className="hero-subtitle">
-              Your trusted partner for international education and immigration to the UK, USA, Canada, Australia, Germany, and New Zealand.
+              Unlock Your Potential With Expert-Led Courses And Valuable Insights. Where Wanderlust Meets Academic Excellence across the UK, USA, Canada, Australia, Germany, and New Zealand.
             </p>
             <Link to="/contact" className="btn btn-primary btn-lg delay-1">
               Start Your Journey <ArrowRight size={20} />
@@ -26,19 +26,19 @@ const Home = () => {
         <div className="container stats-grid animate-slide-up delay-1">
           <div className="stat-card">
             <h2 className="stat-number">16k+</h2>
-            <p className="stat-label">Students Guided</p>
+            <p className="stat-label">Students Enrolled</p>
           </div>
           <div className="stat-card">
-            <h2 className="stat-number">6+</h2>
-            <p className="stat-label">Top Destinations</p>
+            <h2 className="stat-number">400+</h2>
+            <p className="stat-label">Affiliated Universities</p>
           </div>
           <div className="stat-card">
-            <h2 className="stat-number">98%</h2>
-            <p className="stat-label">Visa Success Rate</p>
+            <h2 className="stat-number">99%</h2>
+            <p className="stat-label">Satisfaction Rate</p>
           </div>
           <div className="stat-card">
-            <h2 className="stat-number">10+</h2>
-            <p className="stat-label">Years Experience</p>
+            <h2 className="stat-number">2000+</h2>
+            <p className="stat-label">Courses Available</p>
           </div>
         </div>
       </section>

@@ -6,10 +6,12 @@ import Services from './pages/Services';
 import Destinations from './pages/Destinations';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div className="app-container">
+      <ScrollToTop />
       <Navbar />
       <main className="main-content">
         <Routes>

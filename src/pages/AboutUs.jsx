@@ -17,7 +17,11 @@ const AboutUs = () => {
           <div className="about-text">
             <h2>Our Story</h2>
             <p>GradRoute was founded with a singular vision: to make international education accessible and straightforward for ambitious students and professionals. Over the years, we have grown into a premier consultancy, helping thousands navigate the complex process of studying and migrating abroad.</p>
-            <p>Our modern, tech-forward approach combined with deep industry expertise positions us uniquely to offer personalized, reliable, and transparent services. Whether you're looking into Nursing, IT, Business programs, or seeking permanent residency, our dedicated team is here to guide you every step of the way.</p>
+            <p>Our modern, tech-forward approach combined with deep industry expertise positions us uniquely to offer personalized, reliable, and transparent services. We change the lives of millions of students, enabling them to explore all their study options in one place and to find the best fit study programme that matches their needs, goals, and preferences.</p>
+            <div style={{ marginTop: '30px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--primary-navy)' }}>Rated 4.5/5 on Trustpilot</span>
+              <span style={{ color: '#00b67a', fontSize: '1.5rem', letterSpacing: '2px' }}>★★★★★</span>
+            </div>
           </div>
           <div className="about-image"></div>
         </div>
