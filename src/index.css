@@ -1,0 +1,131 @@
+:root {
+  /* Color Palette */
+  --primary-navy: #002147;
+  --primary-cyan: #00B4D8;
+  --primary-cyan-hover: #0096b8;
+  --white: #ffffff;
+  --bg-light: #f4f7f6;
+  --text-dark: #1a1a1a;
+  --text-muted: #555555;
+  --border-color: #e0e0e0;
+  
+  /* Typography */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Misc */
+  --transition: all 0.3s ease-in-out;
+  --border-radius: 8px;
+  --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+  --shadow-md: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--white);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary-navy);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+/* Base Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  text-align: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: var(--primary-cyan);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-cyan-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-navy);
+  border: 2px solid var(--primary-navy);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-navy);
+  color: var(--white);
+}
+
+/* Section styling */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
