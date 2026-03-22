@@ -1,41 +1,54 @@
 .page-header {
-  background-color: var(--primary-navy);
+  background: linear-gradient(135deg, var(--primary-navy), #1a365d);
   color: var(--white);
-  padding: 80px 0;
+  padding: 140px 0 120px;
   text-align: center;
+  border-bottom-left-radius: 50% 10%;
+  border-bottom-right-radius: 50% 10%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .page-header h1 {
   color: var(--white);
-  font-size: 3rem;
-  margin-bottom: 15px;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .page-header p {
-  font-size: 1.2rem;
-  color: #ccc;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .services-list {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 80px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 10;
 }
 
 .service-item {
   display: flex;
   align-items: center;
-  gap: 40px;
-  background: var(--white);
-  padding: 40px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-sm);
+  gap: 60px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  padding: 60px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
   transition: var(--transition);
+  border: 1px solid var(--glass-border);
 }
 
 .service-item:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 30px 60px rgba(15, 28, 63, 0.15);
+  border-color: var(--primary-cyan);
 }
 
 .service-item.reverse {
@@ -43,30 +56,40 @@
 }
 
 .service-icon {
-  background-color: rgba(0, 180, 216, 0.1);
-  color: var(--primary-cyan);
-  min-width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-navy), var(--primary-cyan));
+  color: var(--white);
+  min-width: 140px;
+  height: 140px;
+  border-radius: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: var(--shadow-md);
+  transform: rotate(-5deg);
+  transition: var(--transition);
+}
+
+.service-item:hover .service-icon {
+  transform: rotate(0deg) scale(1.05);
 }
 
 .service-content h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: var(--primary-navy);
 }
 
 .service-content p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--text-muted);
+  line-height: 1.8;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .service-item, .service-item.reverse {
     flex-direction: column;
     text-align: center;
+    padding: 40px 20px;
   }
 }

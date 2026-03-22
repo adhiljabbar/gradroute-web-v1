@@ -1,58 +1,99 @@
 .footer {
-  background-color: var(--primary-navy);
+  background: var(--primary-navy);
   color: var(--white);
-  padding: 60px 0 20px;
+  padding: 80px 0 30px;
+  border-top: 5px solid var(--accent-cyan);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
 }
 
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
 }
 
-.footer-brand h3 {
-  color: var(--white);
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+.footer-logo-img {
+  height: 70px;
+  margin-bottom: 25px;
+  filter: brightness(0) invert(1);
+  transition: var(--transition);
+}
+
+.footer-logo-img:hover {
+  transform: scale(1.05);
 }
 
 .footer-brand p {
-  color: #ccc;
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  font-size: 1.05rem;
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .footer-links h4,
 .footer-contact h4 {
   color: var(--white);
-  font-size: 1.2rem;
-  margin-bottom: 15px;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-links h4::after,
+.footer-contact h4::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--accent-cyan);
+  border-radius: 2px;
 }
 
 .footer-links a {
-  color: #ccc;
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+  display: inline-block;
 }
 
 .footer-links a:hover {
-  color: var(--primary-cyan);
-  padding-left: 5px;
+  color: var(--accent-cyan);
+  transform: translateX(8px);
 }
 
 .footer-contact p {
-  color: #ccc;
-  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 15px;
+  font-size: 1.05rem;
 }
 
 .footer-bottom {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 25px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #888;
-  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 2;
 }

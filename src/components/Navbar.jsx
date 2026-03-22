@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -7,7 +8,7 @@ const Navbar = () => {
     <header className="navbar">
       <div className="container nav-container">
         <Link to="/" className="nav-logo">
-          GradRoute
+          <img src={logo} alt="GradRoute" className="logo-img" />
         </Link>
         <nav className="nav-menu">
           <Link to="/" className="nav-item">Home</Link>

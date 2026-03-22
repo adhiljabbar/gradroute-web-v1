@@ -1,12 +1,45 @@
+.page-header {
+  background: linear-gradient(135deg, var(--primary-navy), #1a365d);
+  color: var(--white);
+  padding: 140px 0 120px;
+  text-align: center;
+  border-bottom-left-radius: 50% 10%;
+  border-bottom-right-radius: 50% 10%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.page-header h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.page-header p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .destination-detail {
   display: flex;
-  gap: 40px;
-  margin-bottom: 60px;
-  background: var(--white);
-  border-radius: var(--border-radius);
+  gap: 60px;
+  margin-top: -60px;
+  margin-bottom: 80px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  border-radius: var(--border-radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-lg);
   align-items: stretch;
+  border: 1px solid var(--glass-border);
+  position: relative;
+  z-index: 10;
+}
+
+.destination-detail:not(:first-child) {
+  margin-top: 0;
 }
 
 .destination-detail.reverse {
@@ -15,56 +48,94 @@
 
 .dest-image-large {
   flex: 1;
-  min-height: 400px;
+  min-height: 500px;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
-.uk-bg { background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); }
-.usa-bg { background-image: url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); }
-.canada-bg { background-image: url('https://images.unsplash.com/photo-1503614472-8c93d56e92ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); }
-.aus-bg { background-image: url('https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); }
+.dest-image-large::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0.2), transparent);
+}
+.destination-detail.reverse .dest-image-large::after {
+  background: linear-gradient(to left, rgba(255,255,255,0.2), transparent);
+}
+
+.uk-bg { background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); }
+.usa-bg { background-image: url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); }
+.canada-bg { background-image: url('https://images.unsplash.com/photo-1503614472-8c93d56e92ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); }
+.aus-bg { background-image: url('https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); }
 
 .dest-info {
   flex: 1;
-  padding: 40px;
+  padding: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .dest-info h2 {
-  font-size: 2rem;
-  color: var(--primary-cyan);
-  margin-bottom: 15px;
+  font-size: 2.8rem;
+  color: var(--primary-navy);
+  margin-bottom: 20px;
 }
 
 .dest-info p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--text-muted);
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  line-height: 1.8;
 }
 
 .dest-info h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--primary-cyan);
 }
 
 .dest-info ul {
-  list-style-type: disc;
-  padding-left: 20px;
+  list-style-type: none;
+  padding-left: 0;
   color: var(--text-dark);
 }
 
 .dest-info ul li {
-  margin-bottom: 8px;
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 30px;
+  font-size: 1.05rem;
 }
 
-@media (max-width: 900px) {
+.dest-info ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-cyan);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+  .page-header h1 { font-size: 3rem; }
   .destination-detail, .destination-detail.reverse {
     flex-direction: column;
   }
   .dest-image-large {
-    min-height: 300px;
+    min-height: 350px;
   }
+  .dest-image-large::after {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2), transparent) !important;
+  }
+  .dest-info {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header { padding: 100px 20px 80px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;}
+  .destination-detail { margin-top: -40px; margin-bottom: 40px; }
+  .dest-info h2 { font-size: 2.2rem; }
 }
