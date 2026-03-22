@@ -23,7 +23,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page">
+    <div className="contact-page animate-slide-up">
       <div className="page-header">
         <div className="container">
           <h1>Get in Touch</h1>
@@ -33,7 +33,7 @@ const Contact = () => {
 
       <div className="container section">
         <div className="contact-grid">
-          <div className="contact-info">
+          <div className="contact-info animate-slide-up delay-1">
             <h2>Contact Information</h2>
             <p className="info-subtitle">Reach out to us for any queries regarding study abroad programs, visas, or PR immigration services.</p>
             
@@ -62,7 +62,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="contact-form-container">
+          <div className="contact-form-container animate-slide-up delay-2">
             <h2>Book a Free Consultation</h2>
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">

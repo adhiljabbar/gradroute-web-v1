@@ -3,7 +3,7 @@ import './Destinations.css';
 
 const Destinations = () => {
   return (
-    <div className="destinations-page">
+    <div className="destinations-page animate-slide-up">
       <div className="page-header">
         <div className="container">
           <h1>Study Destinations</h1>
@@ -12,7 +12,7 @@ const Destinations = () => {
       </div>
 
       <div className="container section">
-        <div className="destination-detail" id="uk">
+        <div className="destination-detail animate-slide-up delay-1" id="uk">
           <div className="dest-image-large uk-bg"></div>
           <div className="dest-info">
             <h2>Study in the UK</h2>
@@ -28,7 +28,7 @@ const Destinations = () => {
           </div>
         </div>
 
-        <div className="destination-detail reverse" id="usa">
+        <div className="destination-detail reverse animate-slide-up delay-1" id="usa">
           <div className="dest-image-large usa-bg"></div>
           <div className="dest-info">
             <h2>Study in the USA</h2>
@@ -44,7 +44,7 @@ const Destinations = () => {
           </div>
         </div>
 
-        <div className="destination-detail" id="canada">
+        <div className="destination-detail animate-slide-up delay-1" id="canada">
           <div className="dest-image-large canada-bg"></div>
           <div className="dest-info">
             <h2>Study in Canada</h2>
@@ -60,7 +60,7 @@ const Destinations = () => {
           </div>
         </div>
 
-        <div className="destination-detail reverse" id="aus">
+        <div className="destination-detail reverse animate-slide-up delay-1" id="aus">
           <div className="dest-image-large aus-bg"></div>
           <div className="dest-info">
             <h2>Study in Australia</h2>
@@ -72,6 +72,38 @@ const Destinations = () => {
               <li>IELTS/PTE Scores</li>
               <li>Overseas Student Health Cover (OSHC)</li>
               <li>Genuine Temporary Entrant (GTE) statement</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="destination-detail animate-slide-up delay-1" id="germany">
+          <div className="dest-image-large germany-bg-large"></div>
+          <div className="dest-info">
+            <h2>Study in Germany</h2>
+            <p>Germany is famous for its nearly free education system at public universities and world-class engineering and IT programs. Fast becoming a top choice for international students.</p>
+            <h3>General Requirements:</h3>
+            <ul>
+              <li>Valid Passport</li>
+              <li>Studienkolleg (for UG) or Recognized Bachelor's</li>
+              <li>German Proficiency (TestDaF/DSH) or IELTS for English tracks</li>
+              <li>Blocked Account for Proof of Funds</li>
+              <li>Letter of Motivation (LOM)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="destination-detail reverse animate-slide-up delay-1" id="nz">
+          <div className="dest-image-large nz-bg-large"></div>
+          <div className="dest-info">
+            <h2>Study in New Zealand</h2>
+            <p>New Zealand offers a pristine environment, incredibly safe cities, and a progressive education model. It is very welcoming to international students, offering great post-study work visas.</p>
+            <h3>General Requirements:</h3>
+            <ul>
+              <li>Valid Passport</li>
+              <li>Academic Transcripts</li>
+              <li>IELTS/PTE Scores</li>
+              <li>Proof of Funds</li>
+              <li>Police Clearance Certificate</li>
             </ul>
           </div>
         </div>

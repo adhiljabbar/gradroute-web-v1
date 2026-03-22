@@ -4,7 +4,7 @@ import './Services.css';
 
 const Services = () => {
   return (
-    <div className="services-page">
+    <div className="services-page animate-slide-up">
       <div className="page-header">
         <div className="container">
           <h1>Our Services</h1>
@@ -14,7 +14,7 @@ const Services = () => {
       
       <div className="container section">
         <div className="services-list">
-          <div className="service-item">
+          <div className="service-item animate-slide-up delay-1">
             <div className="service-icon"><BookOpen size={40} /></div>
             <div className="service-content">
               <h2>Educational Counseling</h2>
@@ -22,7 +22,7 @@ const Services = () => {
             </div>
           </div>
           
-          <div className="service-item reverse">
+          <div className="service-item reverse animate-slide-up delay-2">
             <div className="service-icon"><FileText size={40} /></div>
             <div className="service-content">
               <h2>SOP & Resume Guidance</h2>
@@ -30,7 +30,7 @@ const Services = () => {
             </div>
           </div>
           
-          <div className="service-item">
+          <div className="service-item animate-slide-up delay-3">
             <div className="service-icon"><Globe size={40} /></div>
             <div className="service-content">
               <h2>Visa Assistance</h2>
@@ -38,7 +38,7 @@ const Services = () => {
             </div>
           </div>
           
-          <div className="service-item reverse">
+          <div className="service-item reverse animate-slide-up delay-4">
             <div className="service-icon"><LifeBuoy size={40} /></div>
             <div className="service-content">
               <h2>Post-arrival Support</h2>
