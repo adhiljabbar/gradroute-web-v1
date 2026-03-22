@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import TestPrep from './pages/TestPrep';
 import Immigration from './pages/Immigration';
 import FAQ from './pages/FAQ';
+import DestinationDetail from './pages/DestinationDetail';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/test-prep" element={<TestPrep />} />
           <Route path="/immigration" element={<Immigration />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/destinations/:id" element={<DestinationDetail />} />
         </Routes>
       </main>
       <Footer />

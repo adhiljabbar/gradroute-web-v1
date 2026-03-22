@@ -1,0 +1,202 @@
+.dest-hero {
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  position: relative;
+  text-align: center;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  margin-bottom: 60px;
+}
+
+.back-link {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  color: var(--white);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  background: var(--primary-cyan);
+  color: var(--primary-navy);
+}
+
+.dest-hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.dest-hero p {
+  font-size: 1.35rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.dest-detail-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.dest-overview-text {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--text-dark);
+}
+
+.mt-40 { margin-top: 40px; margin-bottom: 20px; color: var(--primary-navy); font-size: 2rem; }
+.mt-30 { margin-top: 30px; }
+
+.why-study-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.why-study-card {
+  background: var(--glass-bg);
+  padding: 30px 25px;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.why-study-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-cyan);
+  box-shadow: var(--shadow-md);
+}
+
+.ws-icon {
+  color: var(--primary-cyan);
+  margin-bottom: 15px;
+}
+
+.why-study-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--primary-navy);
+}
+
+.why-study-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.programs-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.program-tag {
+  background: linear-gradient(135deg, rgba(0, 180, 216, 0.1), rgba(0, 180, 216, 0.05));
+  color: var(--primary-cyan);
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid var(--glass-border);
+  transition: var(--transition);
+}
+
+.program-tag:hover {
+  background: var(--primary-cyan);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+.sidebar-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  padding: 35px 30px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--glass-border);
+}
+
+.sidebar-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: var(--primary-navy);
+  border-bottom: 2px solid var(--primary-cyan);
+  padding-bottom: 10px;
+  display: inline-flex;
+}
+
+.req-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.req-list li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+.req-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-cyan);
+  font-weight: bold;
+}
+
+.cost-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.consultation-card {
+  background: linear-gradient(135deg, var(--primary-navy), #1a365d);
+  color: var(--white);
+}
+
+.consultation-card h3 {
+  color: var(--primary-cyan);
+  border-bottom: none;
+  margin-bottom: 10px;
+}
+
+.consultation-card p {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .dest-detail-grid { grid-template-columns: 1fr; }
+  .dest-hero h1 { font-size: 3rem; }
+  .dest-hero { height: auto; padding: 100px 20px 60px; }
+  .back-link { top: 15px; left: 15px; }
+}

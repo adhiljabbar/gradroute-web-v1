@@ -78,42 +78,42 @@ const Home = () => {
               <div className="dest-image uk-img"></div>
               <div className="dest-content">
                 <h3>United Kingdom</h3>
-                <Link to="/destinations#uk">Learn more &rarr;</Link>
+                <Link to="/destinations/uk">Learn more &rarr;</Link>
               </div>
             </div>
             <div className="destination-card animate-slide-up delay-2">
               <div className="dest-image usa-img"></div>
               <div className="dest-content">
                 <h3>United States</h3>
-                <Link to="/destinations#usa">Learn more &rarr;</Link>
+                <Link to="/destinations/usa">Learn more &rarr;</Link>
               </div>
             </div>
             <div className="destination-card animate-slide-up delay-3">
               <div className="dest-image canada-img"></div>
               <div className="dest-content">
                 <h3>Canada</h3>
-                <Link to="/destinations#canada">Learn more &rarr;</Link>
+                <Link to="/destinations/canada">Learn more &rarr;</Link>
               </div>
             </div>
             <div className="destination-card animate-slide-up delay-4">
               <div className="dest-image aus-img"></div>
               <div className="dest-content">
                 <h3>Australia</h3>
-                <Link to="/destinations#aus">Learn more &rarr;</Link>
+                <Link to="/destinations/australia">Learn more &rarr;</Link>
               </div>
             </div>
             <div className="destination-card animate-slide-up delay-5">
               <div className="dest-image germany-img"></div>
               <div className="dest-content">
                 <h3>Germany</h3>
-                <Link to="/destinations#germany">Learn more &rarr;</Link>
+                <Link to="/destinations/germany">Learn more &rarr;</Link>
               </div>
             </div>
             <div className="destination-card animate-slide-up delay-5">
               <div className="dest-image nz-img"></div>
               <div className="dest-content">
                 <h3>New Zealand</h3>
-                <Link to="/destinations#nz">Learn more &rarr;</Link>
+                <Link to="/destinations/new-zealand">Learn more &rarr;</Link>
               </div>
             </div>
           </div>
